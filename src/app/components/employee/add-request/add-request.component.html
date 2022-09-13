@@ -1,0 +1,52 @@
+<div  class="main-container" [hidden]="submitted">
+    <h2>Travel Request Form</h2>
+    <form (submit) ="addRequest()">
+    <table>
+        <tr>
+            <td>Employee Id</td>
+            <td><input type="text" name="employeeId" [(ngModel)]="requestDetails.employeeDetails.employeeId" ></td>
+        </tr>
+      <tr>
+        <td>Departure Location :</td>
+        <td><input type="text" name="departureLocation" [(ngModel)]="requestDetails.departureLocation" ></td>
+      </tr>
+      <tr>
+        <td>Destination : </td>
+        <td><input type="text"name="destination" [(ngModel)]="requestDetails.destination" ></td>
+      </tr>
+      <tr>
+        <td>Mode of travel</td>
+        <select name="modeoftravel" [(ngModel)]="requestDetails.modeOfTravel">
+          <option value="">--select--</option>
+          <option value="train">train</option>
+          <option value="bus">bus</option>
+          <option value="flight">flight</option>
+        </select>
+      </tr>
+      <tr>
+        <td>purpose of travelling :</td>
+        <td><input type="text" name="purpose" [(ngModel)]="requestDetails.purposeOfTravelling" ></td>
+      </tr>
+      <tr>
+        <td>Departure Date :</td>
+        <td><input type="date" name="departureDate" [(ngModel)]="requestDetails.departureDate"></td>
+      </tr>
+      <tr>
+        <td>Arrival Date :</td>
+        <td><input type="date"  name="arrivaldate" [(ngModel)]="requestDetails.arrivalDate"></td>
+      </tr>
+      <tr>
+        <td>status:</td>
+        <td><input type="text"  value="pending" name="status" [(ngModel)]="requestDetails.status"></td>
+      </tr>
+      <tr>
+        <td><input type="submit" value="Add Request"></td>
+      </tr>
+    </table>
+</form>
+  </div>
+  <div [hidden]="!submitted">
+    <h2>Add New Request Successfully ..!</h2>
+    <button (click)="backToHomePage()">Back to home</button>
+  </div>
+

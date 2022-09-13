@@ -1,0 +1,42 @@
+<div class="main-container" [hidden]="submitted">
+    <h2>Add Booking Details</h2>
+    <form (submit)="addBookingDetails()">
+        <table>
+            <tr>
+                <td>Request Id :</td>
+                <td><input type="text" name="requestId" [(ngModel)]="bookingDetails.requestDetails.requestId"></td>
+            </tr>
+            <tr>
+                <td>Travel cost :</td>
+                <td><input type="text" name="travelCost" [(ngModel)]="bookingDetails.travelCost"></td>
+            </tr>
+            <tr>
+                <td>Hotel Name : </td>
+                <td><input type="text" name="hotelName" [(ngModel)]="bookingDetails.hotelName"></td>
+            </tr>
+            <tr>
+                <td>Check In :</td>
+                <td><input type="time" name="checkIn" [(ngModel)]="bookingDetails.checkIn"></td>
+            </tr>
+            <tr>
+                <td>Check out:</td>
+                <td><input type="time" name="checkOut" [(ngModel)]="bookingDetails.checkOut"></td>
+            </tr>
+            <tr>
+                <td>Departure time :</td>
+                <td><input type="time" name="departureTime" [(ngModel)]="bookingDetails.departureTime" ></td>
+            </tr>
+            <tr>
+                <td>Arrival time :</td>
+                <td><input type="time" name="arrivalTime" [(ngModel)]="bookingDetails.arrivalTime"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Book Ticket" ></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div [hidden]="!submitted">
+    <h2>Add Booking Details Successfully ..!</h2>
+    <button (click)="backToHomePage()">Back to home</button>
+</div>

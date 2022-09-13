@@ -1,0 +1,30 @@
+<h2 class="header">All Booking Details</h2>
+<br>
+<table id="existing_request">
+    <tr>
+        <th>Booking Id</th>
+        <th>Request ID</th>
+        <th>Travel Cost</th>
+        <th>Hotel Name</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+        <th>Check In</th>
+        <th>Check Out</th>    
+    </tr>
+    <tr *ngFor=" let bookingDetails of viewAllBookingDetails">
+        <td>{{bookingDetails.bookingId}}</td>
+        <td>{{bookingDetails.requestDetails.requestId}}</td>
+        <td>{{bookingDetails.travelCost}}</td>
+        <td>{{bookingDetails.hotelName}}</td>
+        <td>{{bookingDetails.departureTime}}</td>
+        <td>{{bookingDetails.arrivalTime}}</td>
+        <td>{{bookingDetails.checkIn}}</td>
+        <td>{{bookingDetails.checkOut}}</td>
+    </tr>
+
+</table>
+<br>
+<br>
+<div class="back">
+    <button (click)="backToHomePage()">Back to home</button>
+</div>

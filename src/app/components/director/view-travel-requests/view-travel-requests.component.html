@@ -1,0 +1,68 @@
+<h2 class="header"> View Slab Rejected Requests</h2>
+<br>
+<table id="existing_request">
+    <tr>
+        <th>Request ID</th>
+        <th>Departure Location</th>
+        <th>Destination</th>
+        <th>Mode Of Travel</th>
+        <th>Purpose Of Travel</th>
+        <th>Departure Date</th>
+        <th>Arrival Date</th>
+        <th>Status</th>
+        <th>Action</th>
+    
+    </tr>
+    <tr *ngFor = "let requestDetails of  viewAllDirectorApprovedRequest ">
+        <td>{{requestDetails.requestId}}</td>
+        <td>{{requestDetails.departureLocation}}</td>
+        <td>{{requestDetails.destination}}</td>
+        <td>{{requestDetails.modeOfTravel}}</td>
+        <td>{{requestDetails.purposeOfTravelling}}</td>
+        <td>{{requestDetails.departureDate}}</td>
+        <td>{{requestDetails.arrivalDate}}</td>
+        <td>{{requestDetails.status}}</td>  
+        <td><button (click)="approve(requestDetails)">Approved</button>
+        <button (click)="reject(requestDetails)">Rejected</button></td>
+    </tr>
+
+</table>
+<br>
+<br>
+<h2 class="header"> Manager Travelling Requests</h2>
+<br>
+<table id="existing_request">
+    <tr>
+        <th>Request ID</th>
+        <th>Departure Location</th>
+        <th>Destination</th>
+        <th>Mode Of Travel</th>
+        <th>Purpose Of Travel</th>
+        <th>Departure Date</th>
+        <th>Arrival Date</th>
+        <th>Status</th>
+        <th>Action</th>
+    
+    </tr>
+    <tr *ngFor = "let requestDetails of viewManagerSendRequest  ">
+        <td>{{requestDetails.requestId}}</td>
+        <td>{{requestDetails.departureLocation}}</td>
+        <td>{{requestDetails.destination}}</td>
+        <td>{{requestDetails.modeOfTravel}}</td>
+        <td>{{requestDetails.purposeOfTravelling}}</td>
+        <td>{{requestDetails.departureDate}}</td>
+        <td>{{requestDetails.arrivalDate}}</td>
+        <td>{{requestDetails.status}}</td>  
+        <td><button (click)="approve(requestDetails)">Approved</button>
+        <button (click)="reject(requestDetails)">Rejected</button></td>
+    </tr>
+
+</table>
+
+
+<div class="back">
+    <button (click)="backToHomePage()">Back to home</button>
+  </div>
+
+
+

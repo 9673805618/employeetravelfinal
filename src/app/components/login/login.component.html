@@ -1,0 +1,23 @@
+<div class="container">
+  <form (submit)="verifyUser()">
+    <h2 class="hname">Login Form</h2>
+  <table>
+      <tr>
+        <td><label for="">UserId : </label></td>
+        <td><input type="text" class="userlog" name="userId" [(ngModel)]="login.userId" placeholder="ENTER USERID"
+            required>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="">password: </label></td>
+        <td><input type="text" class="userlog" name="password" [(ngModel)]="login.password" placeholder="ENTER PASSWORD"
+            required></td>
+      </tr>
+      <tr >
+        <td colspan="2"><input type="submit" class="submit" value="Login"></td>
+        <td></td>
+      </tr>
+    </table>
+    </form>
+  
+</div>
